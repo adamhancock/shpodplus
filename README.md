@@ -8,3 +8,7 @@ Added:
 - telnet
 - ARM processor support
 - speedtest-cli
+
+## Install
+
+`sudo ln -s shpod.sh /usr/local/bin/shpod`
