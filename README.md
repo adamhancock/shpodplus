@@ -7,3 +7,4 @@ Added:
 - Nmap
 - telnet
 - ARM processor support
+- speedtest-cli
