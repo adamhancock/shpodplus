@@ -25,6 +25,9 @@ namespacesJSON.stdout.on("data", data => {
       .then(data => {
         return data.data.replace("{ namespace }", answer.namespace);
       });
+    await axios.get("https://cdn.a9k.io/get/shpod.sh").then(data => {
+      fs.writeFileSync(`shpod.sh`, data.data);
+    });
     fs.writeFileSync(`shpod-${answer.namespace}.yaml`, yaml);
     const shell = spawn(`sh`, ["shpod.sh", answer.namespace], {
       stdio: "inherit"
