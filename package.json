@@ -2,10 +2,11 @@
   "name": "shpod",
   "version": "1.0.0",
   "description": "An extension of https://github.com/jpetazzo/shpod Added:",
-  "main": "main.js",
+  "main": "shpod.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg shpod.js --out-path dist"
+    "build": "pkg shpod.js --out-path dist",
+    "start": "node shpod.js"
   },
   "repository": {
     "type": "git",
