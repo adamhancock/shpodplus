@@ -2,9 +2,8 @@
 # For more information about shpod, check it out on GitHub:
 # https://github.com/jpetazzo/shpod
 
-echo "Namespace?"
-read namespace
-YAML=https://shpod.a9k.io/api/run?n=$namespace
+namespace=$1
+YAML=shpod-$namespace.yaml
 echo "Applying YAML: $YAML..."
 kubectl apply -f $YAML -n $namespace
 echo "Waiting for pod to be ready..."
@@ -18,4 +17,5 @@ Clean up will continue in the background. However, if you want to restart
 shpod, you need to wait a bit (about 30 seconds).
 "
 kubectl delete -f $YAML --now -n $namespace
+rm -rf $YAML
 echo "Done."

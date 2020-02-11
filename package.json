@@ -1,0 +1,30 @@
+{
+  "name": "shpod",
+  "version": "1.0.0",
+  "description": "An extension of https://github.com/jpetazzo/shpod Added:",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg shpod.js --out-path dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamhancock/shpodplus.git"
+  },
+  "author": "Adam Hancock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamhancock/shpodplus/issues"
+  },
+  "homepage": "https://github.com/adamhancock/shpodplus#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.0.4"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.3"
+  },
+  "pkg": {
+    "scripts": "shpod.sh"
+  }
+}

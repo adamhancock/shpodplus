@@ -1,6 +1,9 @@
 # shpodplus
 
 An extension of https://github.com/jpetazzo/shpod
+
+Created NodeJS prompt for namespace.
+
 Added:
 
 - Dig
