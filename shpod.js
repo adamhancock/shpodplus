@@ -20,9 +20,11 @@ namespacesJSON.stdout.on("data", data => {
   };
   inquirer.prompt(askNamespace).then(async answer => {
     // console.log(answer.namespace)
-    const yaml = await fs
-      .readFileSync("./shpod.yaml", "utf8")
-      .replace("{ namespace }", answer.namespace);
+    const yaml = await axios
+      .get("https://cdn.a9k.io/get/shpod.yaml")
+      .then(data => {
+        return data.data.replace("{ namespace }", answer.namespace);
+      });
     fs.writeFileSync(`shpod-${answer.namespace}.yaml`, yaml);
     const shell = spawn(`sh`, ["shpod.sh", answer.namespace], {
       stdio: "inherit"
