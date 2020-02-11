@@ -18,4 +18,5 @@ shpod, you need to wait a bit (about 30 seconds).
 "
 kubectl delete -f $YAML --now -n $namespace
 rm -rf $YAML
+rm -rf shpod.sh
 echo "Done."
